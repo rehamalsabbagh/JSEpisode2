@@ -5,9 +5,8 @@
 * - Logs every element of the array
 ************************************/
 const logger = function(array) {
-  // Your code here
-};
-
+	array.forEach(element => console.log(element));
+}
 
 /*************************************
 * toCelsius(temperatures)
@@ -20,8 +19,10 @@ const logger = function(array) {
 * The conversion is:
 *   C = (F - 32) * (5/9)
 ************************************/
+
 const toCelsius = function(temperatures) {
-  // Your code here
+  let map1 = temperatures.map(x => (x - 32) * (5/9));
+  return map1;
 }
 
 
@@ -34,7 +35,8 @@ const toCelsius = function(temperatures) {
 *   that exceed the threshhold
 ***************************************/
 const hottestDays = function(temperatures, threshhold) {
-  // Your code here
+  let filter1 = temperatures.filter(x => x > threshhold);
+  return filter1; 
 }
 
 
@@ -53,7 +55,8 @@ const hottestDays = function(temperatures, threshhold) {
 *       all previous functions
 *******************************************/
 const logHottestDays = function(temperatures, threshhold) {
-  // Your code here
+  let newarr = hottestDays(temperatures,threshhold);
+  logger(toCelsius(newarr));
 }
 
 
